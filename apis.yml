@@ -1,8 +1,16 @@
 aid: aviceda-therapeutics
 name: Aviceda Therapeutics
-description: 'Aviceda Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Aviceda Therapeutics is a private, late-stage clinical biotechnology company
+  based in Cambridge, Massachusetts that describes itself as the world leader in glyco-immune
+  checkpoint therapeutics. It develops immune-mediated therapies built on a glyco-mimetic
+  nanoparticle platform that targets the interaction between sialic acids on cell surfaces
+  and Siglec immune receptors in order to modulate aberrant inflammation. Its lead asset,
+  AVD-104, is an intravitreally administered sialic-acid-coated nanoparticle being evaluated
+  in the Phase 2/3 SIGLEC trial for geographic atrophy secondary to age-related macular
+  degeneration. Aviceda is a therapeutics developer, not a software vendor: it publishes
+  no developer program, no public API, and no machine-readable API artifacts.'
 url: https://raw.githubusercontent.com/api-evangelist/aviceda-therapeutics/refs/heads/main/apis.yml
+image: https://www.avicedarx.com/media/logo/aviceda.svg
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +20,12 @@ created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Therapeutics
+- Ophthalmology
+- Clinical Trials
+- Life Sciences
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +33,44 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aviceda-therapeutics-domain-security.yml
 - type: Website
+  url: https://www.avicedarx.com/
+- type: About
+  url: https://www.avicedarx.com/about-us
+- type: Contact
+  url: https://www.avicedarx.com/contact
+- type: Careers
+  url: https://www.avicedarx.com/careers
+- type: News
+  url: https://www.avicedarx.com/company-updates
+- type: Investors
+  url: https://www.avicedarx.com/investors
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aviceda-therapeutics/
+- type: Twitter
+  url: https://twitter.com/avicedarx
+- type: SecondaryMarket
   url: https://forgeglobal.com/aviceda-therapeutics_stock/
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Aviceda is a clinical-stage biotech developing the AVD-104 nanoparticle for
+    geographic atrophy; its entire web presence is a ten-page corporate brochure at
+    avicedarx.com (sitemap.xml lists only home, technology-platform, lead-asset, pipeline,
+    publications, company-updates, about-us, investors, careers, contact) with no developer
+    section, and api./developer./docs.avicedarx.com do not resolve in DNS.
+  evidence:
+  - url: https://www.avicedarx.com/sitemap.xml
+    status: 200
+  - url: https://www.avicedarx.com/openapi.json
+    status: 404
+  - url: https://www.avicedarx.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-06'
